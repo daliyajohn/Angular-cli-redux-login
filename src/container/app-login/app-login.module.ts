@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppLoginComponent } from './app-login.component';
+import { AppLoginRoutingModule } from './app-login-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AppLoginRoutingModule
   ],
   declarations: [ AppLoginComponent ]
 })
