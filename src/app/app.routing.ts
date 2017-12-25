@@ -7,8 +7,8 @@ import { AppHomeComponent } from '../container/app-home/app-home.component';
 
 const appRoutes: Routes = [
       { path: 'home', loadChildren: 'container/app-home/app-home.module#AppHomeModule' },
-      { path: '', component: AppLoginComponent}
+      { path: '', component: AppLoginComponent }
   ];
 
 
-export const appRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes, { enableTracing: false });
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes, { enableTracing: true });
