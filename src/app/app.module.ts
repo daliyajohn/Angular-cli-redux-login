@@ -4,6 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
+import { AppLoginModule } from '../container/app-login/app-login.module';
+
+
 
 
 @NgModule({
@@ -12,7 +15,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppLoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
