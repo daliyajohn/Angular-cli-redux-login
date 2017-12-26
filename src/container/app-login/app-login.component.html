@@ -1,3 +1,15 @@
-<p>
-  app-login works!
-</p>
+
+<div class="login">
+  <mat-card>
+    <form class="example-form">
+      <mat-form-field>
+        <input matInput placeholder="User name" [(ngModel)]="userName">
+      </mat-form-field><br>
+      <mat-form-field>
+        <input matInput placeholder="Password" [(ngModel)]="password">
+      </mat-form-field><br>
+      <p><button mat-raised-button color="primary" (click)="login()">Sign In</button></p>
+    </form>
+  </mat-card>
+</div>
+

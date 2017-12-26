@@ -1,0 +1,11 @@
+.login {
+    width: 419px;
+    margin: 0 auto;
+    padding-top: 205px;
+}
+p {
+    text-align: center;
+}
+.mat-form-field {
+    width: 100%;
+}
