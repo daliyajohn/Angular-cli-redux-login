@@ -1,6 +1,6 @@
 import * as userActions from './../login/login.action';
 import { User, Authenticated } from './../login/login.model';
-import { Action } from 'rxjs/scheduler/Action';
+// import { Action } from 'rxjs/scheduler/Action';
 
 export interface AppState {
     users: User[];

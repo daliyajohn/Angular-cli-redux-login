@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { LOGIN_SUBMIT } from '../../store/login/login.action';
+import { RootState } from '../../store/index';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-app-login',
@@ -8,11 +12,17 @@ import { Component, OnInit } from '@angular/core';
 export class AppLoginComponent implements OnInit {
   userName: string;
   password: any;
-  constructor() { }
+  userDetails$: Observable<any>;
+  constructor(public store: Store<RootState>) { }
 
   ngOnInit() {
   }
   login() {
-    // code
+    this.store.dispatch({
+      type: LOGIN_SUBMIT,
+      payload: { 'username': this.userName, 'password': this.password }
+    });
+
+    this.userDetails$ = this.store.select('details');
   }
 }

@@ -6,6 +6,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { loginReducer } from '../../store/login/login.reducer';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   imports: [
@@ -14,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forFeature('logindata', loginReducer),
   ],
   declarations: [ AppLoginComponent ]
 })

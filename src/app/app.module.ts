@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppLoginModule } from '../container/app-login/app-login.module';
 import { AppLayoutComponent } from '../container/app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app.routing';
     RouterModule,
     AppRoutingModule,
     AppLoginModule,
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
