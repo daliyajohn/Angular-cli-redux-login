@@ -10,6 +10,7 @@ import { AppLoginModule } from '../container/app-login/app-login.module';
 import { AppLayoutComponent } from '../container/app-layout/app-layout.component';
 import { AppRoutingModule } from './app.routing';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     AppLoginModule,
     StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({
       maxAge: 5
     })
